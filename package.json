@@ -1,0 +1,56 @@
+{
+  "name": "@konitif/theme",
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "version": "0.284.2",
+  "private": false,
+  "type": "module",
+  "description": "KONITIF theme tokens, spatial ambience and perceptual focus projections for compatible workbench hosts.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeMouf/konitif-theme.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "svelte": "./src/index.ts",
+  "files": [
+    "LICENSE.md",
+    "src/ambient",
+    "src/components",
+    "src/depth",
+    "src/focus",
+    "src/runtime",
+    "src/index.ts",
+    "src/konitifRuntimePhaseTokens.ts",
+    "src/konitifTheme.ts",
+    "src/konitifThemeAdapter.ts",
+    "src/konitifTokens.css",
+    "src/konitifWorkbenchThemeRuntime.ts",
+    "README.md",
+    "package.json",
+    "reference"
+  ],
+  "exports": {
+    ".": {
+      "svelte": "./src/index.ts",
+      "default": "./src/index.ts"
+    },
+    "./styles.css": "./src/konitifTokens.css",
+    "./depth/styles.css": "./src/depth/spatialDepthTokens.css"
+  },
+  "dependencies": {
+    "@konitif/workbench": "0.284.2",
+    "svelte": "4.2.20"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "node --test tests/*.test.mjs",
+    "verify:package": "node scripts/verify-package.mjs",
+    "prepack": "npm run typecheck && npm test",
+    "prepublishOnly": "node -e \"throw new Error('Publish only the verified .release/package.tgz archive with scripts disabled')\""
+  }
+}

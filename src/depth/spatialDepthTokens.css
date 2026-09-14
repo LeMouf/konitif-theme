@@ -1,0 +1,82 @@
+[data-workbench-theme='konitif'],
+[data-theme='konitif-dark'],
+[data-theme='konitif-light'] {
+  --k-depth-ambient-blur: 1.8px;
+  --k-depth-background-blur: 1.1px;
+  --k-depth-workspace-blur: 0.36px;
+  --k-depth-panel-blur: 0.12px;
+  --k-depth-active-blur: 0px;
+  --k-depth-overlay-blur: 0px;
+
+  --k-depth-ambient-opacity: 0.64;
+  --k-depth-background-opacity: 0.74;
+  --k-depth-workspace-opacity: 0.92;
+  --k-depth-panel-opacity: 0.98;
+  --k-depth-active-opacity: 1;
+  --k-depth-overlay-opacity: 1;
+
+  --k-depth-ambient-contrast: 0.88;
+  --k-depth-background-contrast: 0.92;
+  --k-depth-workspace-contrast: 0.98;
+  --k-depth-panel-contrast: 1;
+  --k-depth-active-contrast: 1.04;
+  --k-depth-overlay-contrast: 1.02;
+
+  --k-depth-ambient-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.08);
+  --k-depth-background-shadow: 0 0.75rem 2.4rem rgba(0, 0, 0, 0.12);
+  --k-depth-workspace-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.16);
+  --k-depth-panel-shadow: 0 1.2rem 3.8rem rgba(0, 0, 0, 0.2);
+  --k-depth-active-shadow: 0 1.4rem 4.8rem rgba(0, 0, 0, 0.28);
+  --k-depth-overlay-shadow: 0 1.8rem 5.8rem rgba(0, 0, 0, 0.34);
+}
+
+[data-theme='konitif-light'] {
+  --k-depth-ambient-shadow: 0 0.5rem 2rem rgba(45, 65, 95, 0.05);
+  --k-depth-background-shadow: 0 0.75rem 2.4rem rgba(45, 65, 95, 0.08);
+  --k-depth-workspace-shadow: 0 1rem 3rem rgba(45, 65, 95, 0.1);
+  --k-depth-panel-shadow: 0 1.2rem 3.8rem rgba(45, 65, 95, 0.13);
+  --k-depth-active-shadow: 0 1.4rem 4.8rem rgba(45, 65, 95, 0.17);
+  --k-depth-overlay-shadow: 0 1.8rem 5.8rem rgba(45, 65, 95, 0.2);
+}
+
+.konitif-depth-layer[data-depth='ambient'] {
+  --k-depth-layer-blur: var(--k-depth-ambient-blur);
+  --k-depth-layer-opacity: var(--k-depth-ambient-opacity);
+  --k-depth-layer-contrast: var(--k-depth-ambient-contrast);
+  --k-depth-layer-shadow: var(--k-depth-ambient-shadow);
+}
+
+.konitif-depth-layer[data-depth='background'] {
+  --k-depth-layer-blur: var(--k-depth-background-blur);
+  --k-depth-layer-opacity: var(--k-depth-background-opacity);
+  --k-depth-layer-contrast: var(--k-depth-background-contrast);
+  --k-depth-layer-shadow: var(--k-depth-background-shadow);
+}
+
+.konitif-depth-layer[data-depth='workspace'] {
+  --k-depth-layer-blur: var(--k-depth-workspace-blur);
+  --k-depth-layer-opacity: var(--k-depth-workspace-opacity);
+  --k-depth-layer-contrast: var(--k-depth-workspace-contrast);
+  --k-depth-layer-shadow: var(--k-depth-workspace-shadow);
+}
+
+.konitif-depth-layer[data-depth='panel'] {
+  --k-depth-layer-blur: var(--k-depth-panel-blur);
+  --k-depth-layer-opacity: var(--k-depth-panel-opacity);
+  --k-depth-layer-contrast: var(--k-depth-panel-contrast);
+  --k-depth-layer-shadow: var(--k-depth-panel-shadow);
+}
+
+.konitif-depth-layer[data-depth='active'] {
+  --k-depth-layer-blur: var(--k-depth-active-blur);
+  --k-depth-layer-opacity: var(--k-depth-active-opacity);
+  --k-depth-layer-contrast: var(--k-depth-active-contrast);
+  --k-depth-layer-shadow: var(--k-depth-active-shadow);
+}
+
+.konitif-depth-layer[data-depth='overlay'] {
+  --k-depth-layer-blur: var(--k-depth-overlay-blur);
+  --k-depth-layer-opacity: var(--k-depth-overlay-opacity);
+  --k-depth-layer-contrast: var(--k-depth-overlay-contrast);
+  --k-depth-layer-shadow: var(--k-depth-overlay-shadow);
+}

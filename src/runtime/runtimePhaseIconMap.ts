@@ -1,0 +1,1 @@
+export const runtimePhaseIconMap={BOOT:'power',LAUNCH_GATE:'door-open',CONTEXT_RESOLVED:'folder-search',PREFLIGHT:'clipboard-check',PLANNED:'table',INITIALIZING:'settings',HYDRATING:'droplet',RUNNING:'play',SUSPENDING:'pause',SUSPENDED:'square',RESUMING:'fast-forward',TEARING_DOWN:'trash',RECOVERING:'refresh-cw',SAFE_MODE:'shield'} as const;

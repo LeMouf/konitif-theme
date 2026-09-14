@@ -1,0 +1,3 @@
+export type KonitifAmbientUniforms={fogColor:[number,number,number];lightColor:[number,number,number];particleColor:[number,number,number];intensity:number;blurDepth:number;tiltStrength:number};
+const hexToRgb01=(hex:string):[number,number,number]=>{const v=Number.parseInt(hex.replace('#',''),16);return[((v>>16)&255)/255,((v>>8)&255)/255,(v&255)/255];};
+export function createKonitifAmbientUniforms(theme:'dark'|'light'):KonitifAmbientUniforms{return theme==='light'?{fogColor:hexToRgb01('#dce8ff'),lightColor:hexToRgb01('#ffffff'),particleColor:hexToRgb01('#8aa4c8'),intensity:.42,blurDepth:.32,tiltStrength:.35}:{fogColor:hexToRgb01('#145078'),lightColor:hexToRgb01('#22d3ee'),particleColor:hexToRgb01('#aadcff'),intensity:.72,blurDepth:.46,tiltStrength:.55};}

@@ -1,0 +1,201 @@
+:root,
+[data-theme='konitif-dark'] {
+  color-scheme: dark;
+
+  --color-background-canvas: #02050a;
+  --color-background-surface: rgba(8, 17, 31, 0.86);
+  --color-background-elevated: rgba(10, 22, 40, 0.92);
+  --color-background-accent: rgba(14, 34, 58, 0.92);
+  --color-background-muted: rgba(6, 13, 24, 0.86);
+  --color-background-empty-panel: rgba(5, 12, 22, 0.8);
+  --color-background-empty-panel-stripe: rgba(34, 211, 238, 0.045);
+  --color-background-hover: rgba(20, 44, 70, 0.9);
+  --color-background-pressed: rgba(25, 58, 88, 0.92);
+  --color-background-selected: rgba(17, 45, 74, 0.9);
+  --color-background-danger: rgba(56, 18, 27, 0.82);
+  --color-background-danger-hover: rgba(74, 24, 35, 0.9);
+  --color-background-overlay: rgba(2, 5, 10, 0.72);
+  --color-background-glow: rgba(34, 211, 238, 0.13);
+
+  --color-border-subtle: rgba(148, 178, 255, 0.18);
+  --color-border-strong: rgba(148, 178, 255, 0.34);
+  --color-border-focus: #22d3ee;
+  --color-border-danger: rgba(239, 68, 68, 0.58);
+  --color-border-edge-split: rgba(96, 165, 250, 0.56);
+  --color-border-edge-split-hover: rgba(34, 211, 238, 0.78);
+
+  --color-text-primary: #f4f8ff;
+  --color-text-secondary: #9db3cc;
+  --color-text-muted: #60758c;
+  --color-text-danger: #ff9aa8;
+
+  --color-status-success: #4ade80;
+  --color-status-warning: #f59e0b;
+  --color-status-danger: #ef4444;
+
+  --color-action-primary: #22d3ee;
+  --color-action-primary-hover: #67e8f9;
+  --color-action-secondary: rgba(10, 22, 40, 0.8);
+  --color-action-secondary-hover: rgba(16, 36, 62, 0.92);
+  --color-action-danger: rgba(127, 29, 44, 0.58);
+  --color-action-danger-hover: rgba(159, 35, 52, 0.68);
+
+  --shadow-surface: 0 24px 80px rgba(0, 0, 0, 0.28);
+  --shadow-focus: 0 0 0 1px var(--color-border-focus), 0 0 28px rgba(34, 211, 238, 0.18);
+}
+
+:root[data-theme='konitif-light'],
+[data-theme='konitif-light'] {
+  color-scheme: light;
+
+  --color-background-canvas: #f6f8fc;
+  --color-background-surface: rgba(255, 255, 255, 0.68);
+  --color-background-elevated: rgba(255, 255, 255, 0.84);
+  --color-background-accent: rgba(231, 237, 244, 0.86);
+  --color-background-muted: rgba(238, 242, 247, 0.88);
+  --color-background-empty-panel: rgba(239, 245, 252, 0.86);
+  --color-background-empty-panel-stripe: rgba(56, 189, 248, 0.06);
+  --color-background-hover: rgba(230, 239, 250, 0.94);
+  --color-background-pressed: rgba(216, 229, 245, 0.96);
+  --color-background-selected: rgba(220, 237, 255, 0.96);
+  --color-background-danger: rgba(255, 239, 242, 0.9);
+  --color-background-danger-hover: rgba(255, 225, 231, 0.96);
+  --color-background-overlay: rgba(28, 36, 50, 0.32);
+  --color-background-glow: rgba(56, 189, 248, 0.15);
+
+  --color-border-subtle: rgba(110, 140, 180, 0.18);
+  --color-border-strong: rgba(90, 125, 170, 0.28);
+  --color-border-focus: #2f8fd6;
+  --color-border-danger: rgba(239, 68, 68, 0.48);
+  --color-border-edge-split: rgba(99, 102, 241, 0.42);
+  --color-border-edge-split-hover: rgba(56, 189, 248, 0.65);
+
+  --color-text-primary: #1b3048;
+  --color-text-secondary: #4d6480;
+  --color-text-muted: #7b8fa8;
+  --color-text-danger: #b4233b;
+
+  --color-status-success: #34a875;
+  --color-status-warning: #d89125;
+  --color-status-danger: #d9534f;
+
+  --color-action-primary: #2f8fd6;
+  --color-action-primary-hover: #257bc0;
+  --color-action-secondary: rgba(255, 255, 255, 0.72);
+  --color-action-secondary-hover: rgba(236, 244, 255, 0.92);
+  --color-action-danger: rgba(255, 226, 231, 0.82);
+  --color-action-danger-hover: rgba(255, 210, 219, 0.9);
+
+  --shadow-surface: 0 22px 70px rgba(50, 68, 98, 0.16);
+  --shadow-focus: 0 0 0 1px var(--color-border-focus), 0 0 24px rgba(56, 189, 248, 0.18);
+}
+
+:root,
+[data-theme='konitif-dark'],
+[data-workbench-color-mode='dark'] {
+  --k-bg-root: var(--color-background-canvas, #02050a);
+  --k-bg-space: #06121f;
+  --k-bg-space-deep: #02060d;
+  --k-bg-surface: color-mix(in srgb, var(--color-background-surface, #08111f) 78%, transparent);
+  --k-bg-surface-strong: color-mix(in srgb, var(--color-background-elevated, #0a1628) 90%, transparent);
+  --k-text-primary: var(--color-text-primary, #f4f8ff);
+  --k-text-secondary: var(--color-text-secondary, #9db3cc);
+  --k-text-muted: var(--color-text-muted, #60758c);
+  --k-accent-primary: var(--color-action-primary, #22d3ee);
+  --k-accent-secondary: #60a5fa;
+  --k-accent-success: var(--color-status-success, #4ade80);
+  --k-accent-warning: var(--color-status-warning, #f59e0b);
+  --k-accent-error: var(--color-status-danger, #ef4444);
+  --k-accent-hydration: #a855f7;
+  --k-entity-application: #69ecc1;
+  --k-entity-application-rgb: 105, 236, 193;
+  --k-entity-repository: #b084ff;
+  --k-entity-repository-rgb: 176, 132, 255;
+  --k-border-soft: color-mix(in srgb, var(--color-border-subtle, #94b2ff) 64%, transparent);
+  --k-border-strong: color-mix(in srgb, var(--color-border-strong, #94b2ff) 74%, transparent);
+  --k-glow-primary: rgba(34, 211, 238, 0.32);
+  --k-glow-success: rgba(74, 222, 128, 0.28);
+  --k-glow-error: rgba(239, 68, 68, 0.32);
+  --k-frustum-fog: rgba(20, 80, 120, 0.18);
+  --k-frustum-light: rgba(34, 211, 238, 0.22);
+  --k-frustum-light-core: rgba(150, 245, 255, 0.36);
+  --k-frustum-shadow: rgba(0, 0, 0, 0.22);
+  --k-particle-color: rgba(170, 220, 255, 0.72);
+  --k-particle-glow: rgba(34, 211, 238, 0.22);
+  --k-space-grid-major: rgba(45, 230, 210, 0.74);
+  --k-space-grid-minor: rgba(45, 230, 210, 0.32);
+  --k-space-grid-tertiary: rgba(45, 230, 210, 0.16);
+  --k-space-grid-node: rgba(158, 255, 239, 0.9);
+  --k-space-grid-origin: rgba(236, 255, 255, 0.96);
+  --k-space-grid-horizon: rgba(36, 220, 160, 0.22);
+  --k-space-grid-fog: rgba(20, 180, 150, 0.12);
+  --k-space-grid-axis: rgba(103, 255, 232, 0.86);
+  --k-space-grid-opacity: 0.92;
+  --k-space-grid-blur: 0px;
+  --k-runtime-tint: var(--k-accent-primary);
+  --k-runtime-tint-rgb: 34, 211, 238;
+  --k-runtime-intensity: 0.5;
+}
+
+:root[data-theme='light'],
+[data-theme='konitif-light'],
+[data-workbench-color-mode='light'] {
+  --k-bg-root: #eef2f7;
+  --k-bg-space: #e7edf4;
+  --k-bg-space-deep: #dbe6f0;
+  --k-bg-surface: rgba(255, 255, 255, 0.68);
+  --k-bg-surface-strong: rgba(255, 255, 255, 0.84);
+  --k-text-primary: #1b3048;
+  --k-text-secondary: #4d6480;
+  --k-text-muted: #7b8fa8;
+  --k-accent-primary: #2f8fd6;
+  --k-accent-secondary: #6b7fe8;
+  --k-accent-success: #34a875;
+  --k-accent-warning: #d89125;
+  --k-accent-error: #d9534f;
+  --k-accent-hydration: #9275d8;
+  --k-entity-application: #0f9f86;
+  --k-entity-application-rgb: 15, 159, 134;
+  --k-entity-repository: #8b5cf6;
+  --k-entity-repository-rgb: 139, 92, 246;
+  --k-border-soft: rgba(110, 140, 180, 0.18);
+  --k-border-strong: rgba(90, 125, 170, 0.28);
+  --k-glow-primary: rgba(47, 143, 214, 0.2);
+  --k-glow-success: rgba(52, 168, 117, 0.18);
+  --k-glow-error: rgba(217, 83, 79, 0.18);
+  --k-frustum-light: rgba(255, 238, 205, 0.38);
+  --k-frustum-light-core: rgba(255, 246, 230, 0.72);
+  --k-frustum-fog: rgba(190, 220, 255, 0.14);
+  --k-frustum-shadow: rgba(110, 135, 165, 0.12);
+  --k-particle-color: rgba(90, 130, 175, 0.34);
+  --k-particle-glow: rgba(255, 228, 185, 0.26);
+  --k-space-grid-major: rgba(105, 145, 190, 0.22);
+  --k-space-grid-minor: rgba(105, 145, 190, 0.075);
+  --k-space-grid-tertiary: rgba(105, 145, 190, 0.04);
+  --k-space-grid-node: rgba(90, 145, 195, 0.34);
+  --k-space-grid-origin: rgba(75, 135, 190, 0.48);
+  --k-space-grid-axis: rgba(80, 140, 190, 0.2);
+  --k-space-grid-horizon: rgba(160, 190, 220, 0.1);
+  --k-space-grid-fog: rgba(200, 220, 240, 0.18);
+  --k-space-grid-opacity: 0.76;
+  --k-space-grid-blur: 0px;
+}
+
+.konitif-theme-root {
+  min-height: 100dvh;
+  background: var(--k-bg-root);
+  color: var(--k-text-primary);
+  transition:
+    background-color 700ms ease,
+    color 700ms ease;
+}
+
+.konitif-glass-panel {
+  border: 1px solid var(--k-border-soft);
+  background: var(--k-bg-surface);
+  color: var(--k-text-primary);
+  backdrop-filter: blur(18px) saturate(1.22);
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}

@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0.0",
+  "package": "@konitif/theme",
+  "diagrams": [
+    {
+      "id": "runtime-to-perception",
+      "title": "From runtime signal to perception",
+      "kind": "mechanism",
+      "summary": "The theme combines authored tokens and observed signals to produce a purely projective spatial reaction.",
+      "nodes": [
+        {
+          "id": "tokens",
+          "label": "Theme tokens",
+          "description": "Colors, depth and materials are defined."
+        },
+        {
+          "id": "signal",
+          "label": "Runtime signal",
+          "description": "A phase or observation is received.",
+          "tone": "observation"
+        },
+        {
+          "id": "map",
+          "label": "Visual mapping",
+          "description": "The signal is mapped to a perceptual expression."
+        },
+        {
+          "id": "spatial",
+          "label": "Spatial state",
+          "description": "Focus, ambience and depth are derived."
+        },
+        {
+          "id": "surface",
+          "label": "Rendered surface",
+          "description": "Components project the result.",
+          "tone": "projection"
+        }
+      ],
+      "edges": [
+        {
+          "from": "tokens",
+          "to": "signal"
+        },
+        {
+          "from": "signal",
+          "to": "map"
+        },
+        {
+          "from": "map",
+          "to": "spatial"
+        },
+        {
+          "from": "spatial",
+          "to": "surface"
+        }
+      ],
+      "caption": "Changing the theme does not modify runtime or semantic workspace state."
+    }
+  ]
+}

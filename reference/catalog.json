@@ -1,0 +1,129 @@
+{
+  "schemaVersion": "1.0.0",
+  "package": "@konitif/theme",
+  "intent": "Project KONITIF visual and spatial direction without changing the functional authority of the host.",
+  "clusters": [
+    {
+      "id": "theme-tokens",
+      "title": "Theme and runtime phases",
+      "summary": "Theme tokens and visual mappings for runtime phases.",
+      "authority": "Authored visual contract.",
+      "owns": [
+        "tokens",
+        "visual mapping"
+      ],
+      "doesNotOwn": [
+        "runtime phase"
+      ],
+      "workflow": [
+        "Define",
+        "Map",
+        "Apply"
+      ],
+      "sources": [
+        "konitifTheme.ts",
+        "konitifWorkbenchThemeRuntime.ts",
+        "konitifRuntimePhaseTokens.ts",
+        "runtimePhaseVisualMap.ts"
+      ]
+    },
+    {
+      "id": "spatial-runtime",
+      "title": "Spatial reactivity",
+      "summary": "Derived spatial state and reactions to runtime signals.",
+      "authority": "Derived spatial projection.",
+      "owns": [
+        "reactivity",
+        "spatial state"
+      ],
+      "doesNotOwn": [
+        "runtime signal"
+      ],
+      "workflow": [
+        "Observe",
+        "Derive",
+        "Animate"
+      ],
+      "sourcePrefixes": [
+        "runtime/"
+      ]
+    },
+    {
+      "id": "ambient",
+      "title": "Ambience and grid",
+      "summary": "Ambient-depth models, presets and components.",
+      "authority": "Ambient visual projection.",
+      "owns": [
+        "grid",
+        "uniforms",
+        "ambience"
+      ],
+      "doesNotOwn": [
+        "workspace"
+      ],
+      "workflow": [
+        "Configure",
+        "Project",
+        "Render"
+      ],
+      "sourcePrefixes": [
+        "ambient/"
+      ],
+      "sources": [
+        "SpatialAmbientRuntime.svelte",
+        "SpatialProjectionGrid.svelte"
+      ]
+    },
+    {
+      "id": "focus-depth",
+      "title": "Focus and depth",
+      "summary": "Perceptual hierarchy, focus planes and depth layers.",
+      "authority": "Local perceptual state.",
+      "owns": [
+        "focus",
+        "depth"
+      ],
+      "doesNotOwn": [
+        "domain selection"
+      ],
+      "workflow": [
+        "Declare",
+        "Compute",
+        "Project"
+      ],
+      "sourcePrefixes": [
+        "focus/",
+        "depth/"
+      ],
+      "sources": [
+        "FocusPlaneProvider.svelte",
+        "PerceptualSurface.svelte",
+        "SpatialDepthStack.svelte",
+        "SpatialDepthLayer.svelte"
+      ]
+    },
+    {
+      "id": "surfaces",
+      "title": "Visual surfaces",
+      "summary": "Surface components for the KONITIF visual direction.",
+      "authority": "Surface rendering.",
+      "owns": [
+        "visual material"
+      ],
+      "doesNotOwn": [
+        "projected content"
+      ],
+      "workflow": [
+        "Receive",
+        "Style",
+        "Render"
+      ],
+      "sourcePrefixes": [
+        "components/"
+      ],
+      "sources": [
+        "KonitifGlassSurface.svelte"
+      ]
+    }
+  ]
+}
