@@ -7,7 +7,7 @@ const read = path => readFileSync(new URL('../' + path, import.meta.url), 'utf8'
 test('manifest exposes only the generic physical theme surface', () => {
   const manifest = JSON.parse(read('package.json'));
   assert.equal(manifest.name, '@konitif/theme');
-  assert.equal(manifest.version, '0.284.2');
+  assert.equal(manifest.version, '0.284.3');
   assert.equal(manifest.dependencies['@konitif/workbench'], '0.284.2');
   assert.equal(manifest.dependencies.svelte, '4.2.20');
   assert.deepEqual(manifest.devDependencies, { typescript: '5.9.3' });

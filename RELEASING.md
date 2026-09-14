@@ -13,12 +13,11 @@ Before enabling the repository variable:
   `main` branch for guarded manual dispatches and `v*` tags for tag-triggered releases.
 - Configure npm trusted publishing for `LeMouf/konitif-theme`, workflow `publish.yml`, environment `npm-release`.
 
-The first npm package creation may require a separate approved bootstrap step.
-No bootstrap, tag, or npm publication is authorized by this document. Publish
-only the verified archive with lifecycle scripts disabled.
+The package already exists on npm. All subsequent releases use the guarded OIDC
+workflow; direct local publication is no longer part of the release path.
 
 The release job type-checks and tests the source package, validates package/tag
 identity, verifies the physical archive and publishes those exact bytes using
 OIDC. It never upgrades tools automatically.
 
-Current preparation targets version `0.284.2` and retains the existing licence.
+Current preparation targets version `0.284.3` and retains the existing licence.
