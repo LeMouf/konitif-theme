@@ -9,7 +9,8 @@ Before enabling the repository variable:
 
 - Protect `main` with the required `validate` check and pull requests.
 - Apply separate `v*` tag rules for immutable updates/deletions and controlled creation.
-- Create the `npm-release` environment with the intended reviewer and only `v*` tags allowed.
+- Create the `npm-release` environment with the intended reviewer; allow the
+  `main` branch for guarded manual dispatches and `v*` tags for tag-triggered releases.
 - Configure npm trusted publishing for `LeMouf/konitif-theme`, workflow `publish.yml`, environment `npm-release`.
 
 The first npm package creation may require a separate approved bootstrap step.
