@@ -38,7 +38,7 @@ mkdirSync(packageRoot, { recursive: true });
 run('tar', ['-xzf', join(temp, packed.filename), '-C', packageRoot, '--strip-components=1']);
 const manifest = JSON.parse(readFileSync(join(packageRoot, 'package.json'), 'utf8'));
 assert.equal(manifest.name, '@konitif/theme');
-assert.equal(manifest.version, '0.284.2');
+assert.equal(manifest.version, '0.284.3');
 assert.deepEqual(manifest.dependencies, {
   '@konitif/workbench': '0.284.2',
   svelte: '4.2.20',

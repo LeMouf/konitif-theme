@@ -1,7 +1,7 @@
 {
   "name": "@konitif/theme",
   "license": "PolyForm-Noncommercial-1.0.0",
-  "version": "0.284.2",
+  "version": "0.284.3",
   "private": false,
   "type": "module",
   "description": "KONITIF theme tokens, spatial ambience and perceptual focus projections for compatible workbench hosts.",
