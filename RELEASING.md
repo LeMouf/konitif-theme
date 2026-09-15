@@ -2,15 +2,15 @@
 
 Publication is disabled by default. The workflow is restricted to this repository,
 an exact version tag on `main` history, and requires
-`THEME_NPM_PUBLISH_ENABLED=true`. A manual dispatch must run from `main` and name
-that exact tag.
+`THEME_NPM_PUBLISH_ENABLED=true`. Tag creation is the only release trigger; the
+workflow has no manual publication path.
 
 Before enabling the repository variable:
 
 - Protect `main` with the required `validate` check and pull requests.
 - Apply separate `v*` tag rules for immutable updates/deletions and controlled creation.
-- Create the `npm-release` environment with the intended reviewer; allow the
-  `main` branch for guarded manual dispatches and `v*` tags for tag-triggered releases.
+- Create the `npm-release` environment with the intended reviewer and allow only
+  `v*` tags to deploy.
 - Configure npm trusted publishing for `LeMouf/konitif-theme`, workflow `publish.yml`, environment `npm-release`.
 
 The package already exists on npm. All subsequent releases use the guarded OIDC

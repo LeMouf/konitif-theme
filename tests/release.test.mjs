@@ -15,24 +15,13 @@ const env = {
 
 test('release guard accepts only the intended package, repository and tag', () => {
   assertReleaseInputs(policy, manifest, lock, env);
-  assertReleaseInputs(policy, manifest, lock, {
-    ...env,
-    GITHUB_EVENT_NAME: 'workflow_dispatch',
-    GITHUB_REF: 'refs/heads/main',
-    THEME_RELEASE_TAG: 'v0.284.3',
-  });
   for (const changed of [
     { GITHUB_REPOSITORY: 'other/repo' },
     { GITHUB_EVENT_NAME: 'pull_request' },
+    { GITHUB_EVENT_NAME: 'workflow_dispatch' },
     { GITHUB_REF: 'refs/heads/main' },
     { GITHUB_REF: 'refs/tags/v0.284.1' },
   ]) assert.throws(() => assertReleaseInputs(policy, manifest, lock, { ...env, ...changed }));
-  assert.throws(() => assertReleaseInputs(policy, manifest, lock, {
-    ...env,
-    GITHUB_EVENT_NAME: 'workflow_dispatch',
-    GITHUB_REF: 'refs/heads/main',
-    THEME_RELEASE_TAG: 'v0.284.1',
-  }));
 });
 
 test('publishing tool versions fail closed without automatic upgrade', () => {
@@ -46,6 +35,9 @@ test('workflow requires opt-in, environment boundary and verified archive', () =
   assert.match(workflow, /github.repository == 'LeMouf\/konitif-theme' && vars.THEME_NPM_PUBLISH_ENABLED == 'true'/);
   assert.match(workflow, /environment: npm-release/);
   assert.match(workflow, /git -C \.release-source merge-base --is-ancestor HEAD origin\/main/);
+  assert.match(workflow, /GITHUB_EVENT_NAME.*push/);
+  assert.match(workflow, /GITHUB_REF.*refs\/tags/);
+  assert.doesNotMatch(workflow, /workflow_dispatch|refs\/heads\/main/);
   assert.match(workflow, /npm publish \.release\/package\.tgz --access public --provenance --ignore-scripts/);
   assert.ok(workflow.indexOf('prepare-release-archive.mjs') < workflow.indexOf('npm publish'));
   assert.doesNotMatch(workflow, /NODE_AUTH_TOKEN|secrets\.|npm install/);
