@@ -10,7 +10,7 @@ const lock = JSON.parse(read('package-lock.json'));
 const env = {
   GITHUB_REPOSITORY: 'LeMouf/konitif-theme',
   GITHUB_EVENT_NAME: 'push',
-  GITHUB_REF: 'refs/tags/v0.284.3',
+  GITHUB_REF: 'refs/tags/v0.284.4',
 };
 
 test('release guard accepts only the intended package, repository and tag', () => {
