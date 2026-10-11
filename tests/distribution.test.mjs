@@ -26,6 +26,6 @@ test('CI is standalone and direct publication remains guarded', () => {
   assert.match(workflow, /contents: read/);
   assert.match(workflow, /npm ci --ignore-scripts/);
   assert.doesNotMatch(workflow, /id-token|npm publish|secrets\./);
-  assert.match(read('scripts/select-ci-runtime.sh'), /24\.20\.0/);
+  assert.match(read('scripts/select-ci-runtime.sh'), /node\/24\.\*\/x64\/bin/);
   assert.doesNotMatch(read('scripts/select-ci-runtime.sh'), /curl|wget|npx/);
 });
