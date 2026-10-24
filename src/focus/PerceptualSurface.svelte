@@ -2,7 +2,7 @@
   import { onDestroy, onMount } from 'svelte';
   import { konitifRoleDefaultDepth, resolveKonitifDepthVisual } from './focusDepthMap';
   import { usePerceptualFocus } from './usePerceptualFocus';
-  import type { KonitifDepthLevel, KonitifSurfaceRole } from './perceptualFocusTypes';
+  import type { KonitifDepthLevel, KonitifSurfaceRole, PerceptualFocusPoint } from './perceptualFocusTypes';
 
   export let id: string;
   export let role: KonitifSurfaceRole = 'panel';
